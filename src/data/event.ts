@@ -1,8 +1,8 @@
 export const eventInfo = {
   celebrant: "Nazira",
   age: 90,
-  date: "Inserir data",
-  time: "Inserir horário",
+  date: "01/09/2026",
+  time: "18h",
   venue: "Local da comemoração",
   address: "Av. Pau Brasil, 18 - Águas Claras",
   mapsUrl: "https://maps.app.goo.gl/zqHGezPNspHpHWjNA",
