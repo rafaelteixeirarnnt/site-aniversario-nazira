@@ -10,9 +10,33 @@ export default function EventLocation() {
   const hasMap = isConfigured(eventInfo.mapEmbedUrl);
   const hasMapsUrl = isConfigured(eventInfo.mapsUrl);
 
+  async function copyText(value: string) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+
+    const input = document.createElement("textarea");
+    input.value = value;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.top = "0";
+    input.style.left = "-9999px";
+    document.body.appendChild(input);
+    input.select();
+    input.setSelectionRange(0, input.value.length);
+
+    const didCopy = document.execCommand("copy");
+    document.body.removeChild(input);
+
+    if (!didCopy) {
+      throw new Error("Copy command failed");
+    }
+  }
+
   async function copyAddress() {
     try {
-      await navigator.clipboard.writeText(eventInfo.address);
+      await copyText(eventInfo.address);
       setCopyStatus("Endereço copiado!");
     } catch {
       setCopyStatus("Não foi possível copiar.");
