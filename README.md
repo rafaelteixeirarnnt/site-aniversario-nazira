@@ -15,6 +15,24 @@ Para gerar a versão estática:
 npm run build
 ```
 
+## Publicar no Render
+
+Este projeto já inclui um `render.yaml` na raiz do repositório.
+
+No Render:
+
+1. Clique em **New**.
+2. Escolha **Blueprint** para usar o `render.yaml`, ou **Static Site** para configurar manualmente.
+3. Conecte o repositório `rafaelteixeirarnnt/site-aniversario-nazira`.
+4. Use a branch `main`.
+
+Configuração manual, caso escolha **Static Site**:
+
+- Build Command: `npm ci && npm run build`
+- Publish Directory: `dist`
+
+Depois do primeiro deploy, novos commits na branch `main` podem gerar novos deploys automaticamente.
+
 ## Onde alterar as informações
 
 - Local, data, horário, endereço e links de mapa: `src/data/event.ts`

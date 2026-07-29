@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: static
+    name: site-aniversario-nazira
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
