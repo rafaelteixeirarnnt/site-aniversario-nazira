@@ -630,11 +630,9 @@ button:disabled {
 }
 
 .back-to-top {
-  position: fixed;
-  right: 14px;
-  bottom: 14px;
-  z-index: 6;
+  display: block;
   min-height: 44px;
+  margin: 18px auto 0;
   padding: 10px 14px;
   border: 1px solid rgba(127, 16, 44, 0.25);
   border-radius: 999px;
@@ -744,6 +742,14 @@ button:disabled {
 
   .font-size-label {
     text-align: left;
+  }
+
+  .back-to-top {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 6;
+    margin: 0;
   }
 }
 
