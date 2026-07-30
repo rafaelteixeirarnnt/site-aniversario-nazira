@@ -6,8 +6,10 @@ export const program: ProgramItem[] = [
     order: 1,
     type: "reading",
     title: "Leitura Bíblica",
-    reference: "",
-    content: "",
+    reference: "Salmo 92:12–15",
+    content: `O justo florescerá como a palmeira; crescerá como o cedro no Líbano. Plantados na casa do Senhor, florescerão nos átrios do nosso Deus. Na velhice ainda darão frutos, serão viçosos e vigorosos, para anunciar que o Senhor é reto; Ele é a minha rocha, e nele não há injustiça.
+
+Salmo 92:12–15`,
   },
   {
     id: "hino-370",
