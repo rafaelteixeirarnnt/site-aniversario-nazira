@@ -474,7 +474,7 @@ button:disabled {
 
 .reader {
   position: relative;
-  padding: 16px 16px 128px;
+  padding: 16px 16px 220px;
 }
 
 .reader-topbar,
@@ -511,10 +511,6 @@ button:disabled {
   color: #9b6530;
   font-size: 1.05rem;
   font-weight: 700;
-}
-
-.reader-navigation {
-  margin-top: 18px;
 }
 
 .compact {
@@ -560,13 +556,18 @@ button:disabled {
   font-weight: 700;
 }
 
-.font-controls {
+.reader-bottom-controls {
   position: sticky;
   bottom: 12px;
   z-index: 5;
   display: grid;
   gap: 10px;
   margin-top: 22px;
+}
+
+.font-controls {
+  display: grid;
+  gap: 10px;
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -607,6 +608,13 @@ button:disabled {
 .font-buttons button:nth-child(2) {
   background: linear-gradient(180deg, #9e173b, var(--wine-dark));
   color: white;
+}
+
+.reader-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .share-wrapper {
@@ -724,7 +732,7 @@ button:disabled {
   }
 
   .reader {
-    padding: 22px 22px 132px;
+    padding: 22px 22px 220px;
   }
 
   .reading-content {

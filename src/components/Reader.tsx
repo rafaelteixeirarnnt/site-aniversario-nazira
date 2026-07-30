@@ -60,27 +60,6 @@ export default function Reader({
         </div>
       </div>
 
-      <div className="reader-navigation" aria-label="Navegação entre itens">
-        <button
-          type="button"
-          className="secondary-action compact"
-          disabled={!previousItem}
-          onClick={() => previousItem && onSelect(previousItem)}
-        >
-          <ArrowLeft size={20} aria-hidden="true" />
-          Anterior
-        </button>
-        <button
-          type="button"
-          className="secondary-action compact"
-          disabled={!nextItem}
-          onClick={() => nextItem && onSelect(nextItem)}
-        >
-          Próxima
-          <ArrowRight size={20} aria-hidden="true" />
-        </button>
-      </div>
-
       <div
         className={`reading-content ${hasContent ? "" : "is-empty"}`}
         style={{ "--reader-font-size": `${fontSize}px` } as CSSProperties}
@@ -95,14 +74,37 @@ export default function Reader({
         )}
       </div>
 
-      <FontSizeControls
-        label={fontLabel}
-        canDecrease={canDecreaseFont}
-        canIncrease={canIncreaseFont}
-        onDecrease={onDecreaseFont}
-        onReset={onResetFont}
-        onIncrease={onIncreaseFont}
-      />
+      <div className="reader-bottom-controls">
+        <FontSizeControls
+          label={fontLabel}
+          canDecrease={canDecreaseFont}
+          canIncrease={canIncreaseFont}
+          onDecrease={onDecreaseFont}
+          onReset={onResetFont}
+          onIncrease={onIncreaseFont}
+        />
+
+        <div className="reader-navigation" aria-label="Navegação entre itens">
+          <button
+            type="button"
+            className="secondary-action compact"
+            disabled={!previousItem}
+            onClick={() => previousItem && onSelect(previousItem)}
+          >
+            <ArrowLeft size={20} aria-hidden="true" />
+            Anterior
+          </button>
+          <button
+            type="button"
+            className="secondary-action compact"
+            disabled={!nextItem}
+            onClick={() => nextItem && onSelect(nextItem)}
+          >
+            Próxima
+            <ArrowRight size={20} aria-hidden="true" />
+          </button>
+        </div>
+      </div>
     </article>
   );
 }
