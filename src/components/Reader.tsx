@@ -41,6 +41,28 @@ export default function Reader({
     item.type === "reading"
       ? "A leitura bíblica será disponibilizada em breve."
       : "A letra desta música será disponibilizada em breve.";
+  const navigationControls = (
+    <div className="reader-navigation" aria-label="Navegação entre itens">
+      <button
+        type="button"
+        className="secondary-action compact"
+        disabled={!previousItem}
+        onClick={() => previousItem && onSelect(previousItem)}
+      >
+        <ArrowLeft size={20} aria-hidden="true" />
+        Anterior
+      </button>
+      <button
+        type="button"
+        className="secondary-action compact"
+        disabled={!nextItem}
+        onClick={() => nextItem && onSelect(nextItem)}
+      >
+        Próxima
+        <ArrowRight size={20} aria-hidden="true" />
+      </button>
+    </div>
+  );
 
   return (
     <article className="reader" aria-labelledby="reader-title">
@@ -59,6 +81,8 @@ export default function Reader({
           <p>{item.artist || item.reference || "Programação da comemoração"}</p>
         </div>
       </div>
+
+      {navigationControls}
 
       <div
         className={`reading-content ${hasContent ? "" : "is-empty"}`}
@@ -84,26 +108,7 @@ export default function Reader({
           onIncrease={onIncreaseFont}
         />
 
-        <div className="reader-navigation" aria-label="Navegação entre itens">
-          <button
-            type="button"
-            className="secondary-action compact"
-            disabled={!previousItem}
-            onClick={() => previousItem && onSelect(previousItem)}
-          >
-            <ArrowLeft size={20} aria-hidden="true" />
-            Anterior
-          </button>
-          <button
-            type="button"
-            className="secondary-action compact"
-            disabled={!nextItem}
-            onClick={() => nextItem && onSelect(nextItem)}
-          >
-            Próxima
-            <ArrowRight size={20} aria-hidden="true" />
-          </button>
-        </div>
+        {navigationControls}
       </div>
     </article>
   );

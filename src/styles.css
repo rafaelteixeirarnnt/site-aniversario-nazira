@@ -485,6 +485,10 @@ button:disabled {
   gap: 10px;
 }
 
+.reader-header + .reader-navigation {
+  margin-top: 18px;
+}
+
 .position-pill {
   min-height: 38px;
   padding: 8px 12px;
