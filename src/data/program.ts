@@ -25,16 +25,6 @@ Mais consagrado, ó faz-me, Senhor!
 Mais humilhado e cheio de amor
 Faz-me mais grato a Ti, mais grato a Ti!
 
-De graça deste ao meu coração
-A santidade, a paz e a fé
-Gozo celeste e consolação
-E liberdade de estar aos Teus pés
-
-Mais grato a Ti, mais grato a Ti
-Mais consagrado, ó faz-me, Senhor!
-Mais humilhado e cheio de amor
-Faz-me mais grato a Ti, mais grato a Ti!
-
 Ó meu Senhor, Tu fizeste por mim
 O que ninguém poderia fazer
 Na cruz pregado verteste, assim
@@ -60,16 +50,6 @@ Pelas bênçãos derramadas
 Pela dor, pela aflição
 Pela graça revelada
 Graças dou pelo perdão
-
-Graças pelo azul-celeste
-E por nuvens que há também
-Pelas rosas do caminho
-Por espinhos que elas têm
-
-Pela escuridão da noite
-Pela estrela que brilhou
-Pela prece respondida
-Pelo sonho que falhou
 
 Pela cruz e o sofrimento
 E por toda provação
